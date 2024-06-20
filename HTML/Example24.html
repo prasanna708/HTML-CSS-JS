@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTML5</title>
+	<link rel="icon" href="Goku.png">
+   </head>
+  <body>
+	<h3>Demo on radio buttons</h3>
+	
+	<fieldset>
+	   <legend>Gender</legend>
+	   <input type="radio" id="g1" name="gen" checked> 
+	   <label>Male</label> &nbsp; 
+	   <input type="radio" id="g2" name="gen"> 
+	   <label>FeMale</label> &nbsp; 
+	   <input type="radio" id="g3" name="gen"> 
+	   <label>Others</label>
+	</fieldset>	
+	<br>
+	
+	<h3>Demo on files</h3>
+	<form action="uploadfile.aspx" method="post" enctype="multipart/form-data">
+	  <input type="file"> <br>
+	  <input type="file" multiple> <bR>
+	  <input type="file" accept=".pdf,.docx">
+	  <br>
+	  <button type="submit">Upload</button>	  
+	</form>
+	<br>
+	
+	<h3>Demo on multiline text fields(textarea tag)</h3>
+	<label>Comments</label><br>
+	<textarea id="com" name="com"></textarea>
+	<br>
+	<label>Address</label><br>
+	<textarea id="addr" name="addr" rows="6" cols="30"></textarea>
+	<br>
+	
+	<h3>Demo on dropdown elements(Select & option tags)</h3>
+	<select id="c" name="c">
+		<option value="r">Red</option>
+		<option>Biue</option>		
+		<option value="y">Yellow</option>		
+		<option>Pink</option>		
+		<option>Gold</option>		
+		<option>Black</option>		
+		<option>silver</option>		
+	</select>
+	<br>
+	
+	<h3>demo on search box</h3>
+	<input type="text" list="mylist">
+	<datalist id="mylist">
+	  <option>Red apple</option>
+	  <option>Red rose</option>
+	  <option>Red sauce</option>
+	  <option>Green Mango</option>	  
+	  <option>Green Chutney</option>	  
+	  <option>Green Banana</option>	  
+	  <option>White powder</option>	  
+	  <option>White Grape</option>	  
+	  <option>White Paste</option> 
+	</datalist>
+  
+  </body>
+</html>
