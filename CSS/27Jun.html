@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    p::first-letter {
+        color: red;
+        font-size: 36px;
+        background: black;
+    }
+
+    h3::before {
+        content: 'Hi ';
+    }
+
+    h4::after {
+        content: ' Bye';
+    }
+
+    ::placeholder {
+        color: pink;
+        text-align: center;
+    }
+
+    p::first-line {
+        color: hotpink;
+    }
+
+    ::selection {
+        background: black;
+        color: yellow;
+    }
+
+    ol li::marker {
+        color: red;
+    }
+
+    ul li::marker {
+        color: blue;
+    }
+</style>
+
+<body>
+    <h2>Pseudo elements</h2>
+    <input type="text" placeholder="enter firstname"><bR>
+    <input type="text" placeholder="enter lastname"><br>
+
+    <h3>Apple</h3>
+    <h3>Mango</h3>
+    <h4>Orange</h4>
+    <h4>Grape</h4>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam illo eaque eveniet, sapiente magni autem nisi
+        aut nostrum nihil debitis, repellat et optio repudiandae modi cumque nesciunt nobis rem possimus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam illo eaque eveniet, sapiente magni autem nisi
+        aut nostrum nihil debitis, repellat et optio repudiandae modi cumque nesciunt nobis rem possimus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam illo eaque eveniet, sapiente magni autem nisi
+        aut nostrum nihil debitis, repellat et optio repudiandae modi cumque nesciunt nobis rem possimus.
+    </p>
+    <ol>
+        <li>html</li>
+        <li>css</li>
+        <li>javascript</li>
+    </ol>
+    <ul>
+        <li>java</li>
+        <li>python</li>
+        <li>Dot.net</li>
+        <li>oracle</li>
+    </ul>
+</body>
+
+</html>

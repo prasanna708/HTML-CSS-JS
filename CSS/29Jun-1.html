@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    img {
+        width: 300px;
+        height: 500px;
+    }
+    .c1 {
+        font-size: large;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: crimson;
+    }
+    main {
+        display: flex;
+        gap: 50px;
+        justify-content: center;
+        padding-top: 50px;
+    }
+    section {
+        box-shadow: 0 0 10px black;
+        transition: linear 600ms;
+        text-align: center;
+    }
+    section:hover {
+        box-shadow: 0 0 40px red;
+        transform: scale(1.2);
+        transform: skew(10deg 5deg);
+       /* transform: rotate(360deg); */
+    }
+</style>
+<body>
+    <main>
+        <section>
+            <div>
+                <img src="../HTML/images/OnePiece.jpg" />
+                <div class="c1">One Piece</div>
+                <div>Type: TV</div>
+                <div>Episodes: ????</div>
+                <div>Status: Currently Airing</div>
+                <div>Aired: Oct 20, 1999 to ?</div>
+                <div>Studio: Toei Animation</div>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <img src="../HTML/images/Dragon ball.jpg" />
+                <div class="c1">Dragon ball Super</div>
+                <div>Type: TV</div>
+                <div>Episodes: 131</div>
+                <div>Aired: Jul 05, 2015 to Mar 25, 2018</div>
+                <div>Studio: Toei Animation</div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

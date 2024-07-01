@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*Styles for child selector*/
+		div  a{
+			color:darkgreen;
+			text-decoration:none;
+		}
+		ul li a{
+			color: hotpink;
+		}
+        ul a{
+            color: blueviolet;
+        }
+
+        /*Styles for direct child selector*/
+        #i1 > a{
+			color:red;
+			text-decoration:none;
+		}
+		#i2 > li > a{
+			color:firebrick;
+		}
+
+	</style>
+</head>
+<body>
+    <!--Child Selectors-->
+    <h2>Child selector</h2>
+	<a href="../HTML/Example1.html"> goto ex1 </a> <br>
+	<a href="../HTML/Example2.html"> goto ex2 </a> <br>
+	<div>
+		<a href="../HTML/Example3.html"> goto ex3 </a> <bR>
+		<a href="../HTML/Example4.html"> goto ex4 </a> 
+		<p>
+			<a href="../HTML/Example5.html"> goto ex5 </a>
+		</p>
+	</div>
+	
+	<ul>
+		<li> <a href="../HTML/Example6.html"> goto ex6 </a> </li>
+		<li> <a href="../HTML/Example7.html"> goto ex7 </a> </li>
+		<a href="../HTML/Example8.html"> goto ex8 </a>
+	</ul>
+
+    <!--Direct Child Selectors-->
+    <h2>demo direct child selector</h2>
+	<a href="../HTML/Example9.html"> goto ex9 </a> <br>
+	<a href="../HTML/Example10.html"> goto ex10 </a> <br>
+	<div id="i1">
+		<a href="../HTML/Example11.html"> goto ex11 </a> <bR>
+		<a href="../HTML/Example12.html"> goto ex12 </a> 
+		<p>
+			<a href="../HTML/Example13.html"> goto ex13 </a>
+		</p>
+	</div>
+	
+	<ul id="i2">
+		<li> <a href="../HTML/Example14.html"> goto ex14 </a> </li>
+		<li> <a href="../HTML/Example15.html"> goto ex15 </a> </li>
+		<a href="../HTML/Example16.html"> goto ex16 </a>
+	</ul>
+</body>
+</html>

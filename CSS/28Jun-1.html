@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #gridbox {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: 60px 60px 60px 60px;
+        /* row-gap:20px;
+        column-gap:15px; */
+        grid-gap: 20px;
+        /* background:linear-gradient(45deg, blue, hotpink);  */
+        background-image: url(images/rose.jpeg);
+        background-size: 100% 100%;
+        font-size: 34px;
+    }
+
+    #gridbox div:nth-child(odd) {
+        background: rgb(72, 2151, 40);
+    }
+
+    #gridbox div:nth-child(even) {
+        background: rgb(255, 242, 9);
+    }
+</style>
+
+<body>
+    <h1>Grid box</h1>
+    <div id="gridbox">
+        <div>January</div>
+        <div>February</div>
+        <div>March</div>
+        <div>April</div>
+        <div>May</div>
+        <div>June</div>
+        <div>July</div>
+        <div>August</div>
+        <div>September</div>
+        <div>October</div>
+        <div>November</div>
+        <div>December</div>
+    </div>
+</body>
+
+</html>
