@@ -1,61 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<title>FB Registration</title>
 	<link rel="icon" href="Goku.png">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Form</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Registration Form</title>
 	<style>
-	   section{
-	     width:660px;
-		 border-radius:15px;
-		 box-shadow:0 0 25px black;
-		 margin:auto;
-		 padding:15px;
-	   }	
+		section {
+			width: 660px;
+			border-radius: 15px;
+			box-shadow: 0 0 25px black;
+			margin: auto;
+			padding: 15px;
+		}
 	</style>
 </head>
+
 <body>
 	<section>
-    <h1>Register</h1>
-    <form action="Registration.html">
-        <label for="first_name">First Name:</label> <span>*</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<label for="sur_name">Surname:</label> <span>*</span>
-		<br>
-        <input type="text" id="first_name" name="first_name" required> &nbsp;
-        <input type="text" id="sur_name" name="sur_name" required><br><br>
-		
-		  <label for="phone">Contact number</label> <span>*</span> <br>
-		  <input type="text" id="phone" name="phone" required maxlength="10"/> <br><br>
-        
-        <label for="email">Email:</label> <span>*</span> <br>
-        <input type="email" id="email" name="email" required><br><br>
-        
-        <label for="password">Password:</label> <span>*</span> <br>
-        <input type="password" id="password" name="password" required><br><br>
-        
-        <label for="birthdate">Birthdate:</label> <span>*</span> <br>
-        <input type="date" id="birthdate" name="birthdate" min="1998-01-01" max="2024-06-15" required><br><br>
-		
-		<div>
-		  <label>Gender:</label><br>
-		  <input type="radio" id="g1" name="gen" value="m"> <label>Male</label> &nbsp; 
-		  <input type="radio" id="g2" name="gen" value="f"> <label>FeMale</label> &nbsp; 
-		  <input type="radio" id="g3" name="gen" value="o">
-		  <label>Others</label>
-		</div>
-		<br>
-		<div>
-			<span style="font-weight="10px">
-				By clicking Sign Up, you agree to our Terms,
-				Privacy Policy and Cookies Policy. You may receive
-				SMS notifications from us and can opt out at any time.
-			</span>
-		</div>
-        <br>
-        <input type="submit" style="background-color:#00a400; color:#fff; border-radius:10px;" value="Sign Up">
-    </form>
+		<h1>Register</h1>
+		<form action="Registration.html">
+			<label for="first_name">First Name:</label> <span>*</span>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<label for="sur_name">Surname:</label> <span>*</span>
+			<br>
+			<input type="text" id="first_name" name="first_name" required> &nbsp;
+			<input type="text" id="sur_name" name="sur_name" required><br><br>
+
+			<label for="phone">Contact number</label> <span>*</span> <br>
+			<input type="text" id="phone" name="phone" required maxlength="10" /> <br><br>
+
+			<label for="email">Email:</label> <span>*</span> <br>
+			<input type="email" id="email" name="email" required><br><br>
+
+			<label for="password">Password:</label> <span>*</span> <br>
+			<input type="password" id="password" name="password" required><br><br>
+
+			<label for="birthdate">Birthdate:</label> <span>*</span> <br>
+			<input type="date" id="birthdate" name="birthdate" min="1998-01-01" max="2024-06-15" required><br><br>
+
+			<div>
+				<label>Gender:</label><br>
+				<input type="radio" id="g1" name="gen" value="m"> <label>Male</label> &nbsp;
+				<input type="radio" id="g2" name="gen" value="f"> <label>FeMale</label> &nbsp;
+				<input type="radio" id="g3" name="gen" value="o">
+				<label>Others</label>
+			</div>
+			<br>
+			<div>
+				<input type="checkbox" value="Accept">
+				<span style="font-weight = 10px;">
+					By clicking Sign Up, you agree to our Terms,
+					Privacy Policy and Cookies Policy. You may receive
+					SMS notifications from us and can opt out at any time.
+				</span>
+			</div>
+			<br>
+			<div>
+				<input type="submit" style="background-color:#00a400; color:#fff; border-radius:19px; font-size: 20px; " value="Sign Up">
+			</div>
+		</form>
 	</section>
 </body>
+
 </html>
