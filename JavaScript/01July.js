@@ -1,4 +1,5 @@
 /* example on defining external script */
+console.log("Hello");
 function fun1()
 {
   document.write("Calling function-1");

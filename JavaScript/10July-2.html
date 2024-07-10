@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmatic Calculator</title>
+</head>
+
+<body>
+    <div align="center">
+        <h2>Arithmatic Calculator</h2>
+        <input type="text" id="num1" placeholder="Enter first number" autofocus>    <br>
+        <input type="text" id="num2" placeholder="Enter second number" >    <br>
+        <input type="text" id="res" placeholder="Result" readonly> 
+        <br>
+        <button onclick="res.value = +num1.value + +num2.value">+</button>
+        <button onclick="res.value = num1.value - num2.value">-</button>
+        <button onclick="res.value = num1.value * num2.value">*</button>
+        <button onclick="res.value = num1.value / num2.value">/</button>
+        <button onclick="res.value = num1.value % num2.value">%</button>
+        <button onclick="res.value = num1.value ** num2.value">^</button>
+
+    </div>
+</body>
+
+</html>

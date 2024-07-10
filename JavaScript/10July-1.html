@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Performing Addition operation</h2>
+    <label for="num1">Enter first number: </label>
+    <input type="text" id="num1"> <br>
+    <label for="num2">Enter second number: </label>
+    <input type="text" id="num2"> <br>
+    <button onclick="Addition()">Addition</button>  <br>
+    <output id="op"></output>
+
+    <script>
+        function Addition() {
+            let x, y, sum;
+            x = +num1.value
+            y = +num2.value
+            sum = x + y;
+            //document.write('Sum is: ' + sum);
+            op.value = 'Sum is: '+sum;
+        }
+    </script>
+</body>
+
+</html>
