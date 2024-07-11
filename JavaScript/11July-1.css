@@ -1,0 +1,31 @@
+#id1 {
+    margin: auto;
+    border-radius: 15px;
+    border: 2px solid darkblue;
+    background: aqua;
+    color: blue;
+    padding: 25px;
+    width: 230px;
+}
+
+#id1 div {
+    margin-bottom: 15px;
+}
+
+button {
+    width: 100px;
+    height: 35px;
+    border: none;
+    outline: none;
+    background: linear-gradient(to right, blue, hotpink);
+    color: white;
+    font-size: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: linear all 500ms; 
+}
+
+button:hover {
+    border-radius: 25px;
+    background: linear-gradient(to left, blue, hotpink);
+}
