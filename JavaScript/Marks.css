@@ -1,0 +1,21 @@
+body {
+    align-items: center;
+}
+table {
+    background: darkcyan;
+    color: darkred;
+    /* box-shadow: 0 0 10px black; */
+    margin: auto;
+    padding: 20px;
+    margin-top: 60px;
+    text-align: center;
+}
+caption {
+    color: darkcyan;
+    padding: 12px;
+    font-size: 25px;
+}
+output{
+    color: black;
+    width: 40px;
+}
