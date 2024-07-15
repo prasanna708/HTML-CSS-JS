@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Finding Maximum and Minimum Values in an Array</h3>
+    <script>
+        const array = [];
+        let n = +prompt('Enter number of array elements');
+        for(i=0;i<n;i++){
+            array[i] = prompt(`Enter array[${i}] value`);
+        }
+        max = array[0]; //assuming maximum value
+        min = array[0]; //assuming minimum value
+        for(i=1;i<n;i++){
+            if(array[i] > max)
+                max = array[i];
+            if(array[i] < min)
+                min = array[i];
+        }
+        document.write(`array = ${array} <br>`);
+        document.write(`Maximum element = ${max} <br>`);
+        document.write(`Minimum element = ${min}`);
+    </script>
+</body>
+</html>

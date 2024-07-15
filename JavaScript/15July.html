@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Nested Arrays
+        const x = [
+            [1,2,3],
+            [4,5,6]
+        ];
+        document.write(`x = ${x} <br>`);
+        document.write(`${x.length} <br>`);
+        document.write(`${x[0].length} <br>`);
+        document.write(`${x[1].length} <br>`);
+
+        for(i=0;i<x.length;i++){
+            for(j=0;j<x.length;j++){
+                document.write(`${x[i][j]} &nbsp;`)
+            }
+            document.write(`<br>`);
+        }
+        console.table(x);
+    </script>
+</body>
+</html>
