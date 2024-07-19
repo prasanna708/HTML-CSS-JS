@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Array Methods:</h3>
+    <script>
+        //pop and push methods
+        const a = [];
+        a.push(10);     
+        a.push(20);
+        a.push(30);
+        a.push(40);
+        a.push(50);
+        document.write(`a elements: ${a}<br>`);
+        a.pop();   
+        a.pop();
+        document.write(`a elements after pop 2 times: ${a}<br>`);
+        document.write(`poped element:${a.pop()}<br>`);    //catching popped element
+        //shift and unshift methods
+        const b = [];
+        b.unshift(10);
+        b.unshift(20);
+        b.unshift(30);
+        b.unshift(40);
+        b.unshift(50);
+        document.write(`b: ${b}<br>`);
+        b.shift();
+        b.shift();
+        document.write(`b after shift: ${b}<br>`);
+        document.write(`b : ${b.shift()}<br>`);
+        //includes,indexOf,lastIndexOf,reverse,sort,join methods
+        const num = [10,20,30,40,50,60,70,80,90,30];
+        //includes
+        document.write(`40 found: ${num.includes(40)}<br>`);
+        document.write(`45 found: ${num.includes(45)}<br>`);
+        let str = 'Yello Mangos';
+        document.write(`${str.includes('Man')}<br>`);
+        document.write(`${str.includes('is')}<br>`);
+        //anonymous arrays and strings
+        document.write(`${[11,22,33,44].includes(22)}<br>`);
+        document.write(`${"Red Apples".includes('App')}<br>`);
+        //indexOf
+        document.write(`30 index: ${num.indexOf(30)}<br>`);
+        document.write(`35 index: ${num.indexOf(35)}<br>`);
+        document.write(`30 index: ${num.indexOf(30,6)}<br>`);
+        document.write(`${str.indexOf('o')}<br>`);
+        document.write(`${str.indexOf('go')}<br>`);
+        //lastIndexOf
+        document.write(`30 index from last: ${num.lastIndexOf(30)}<br>`);
+        document.write(`${str.lastIndexOf('o')}`);
+        //reverse
+        num.reverse();
+        document.write(`nums: ${num}<br>`);
+        //sort
+        num.sort();
+        document.write(`sorted nums: ${num}<br>`);
+        const names = ['Luffy', 'Zoro', 'Nami', 'sanji', 'usopp','Ace','Brook','Shanks','akinu'];
+        document.write(`sorted names: ${names.sort()}<br>`);
+        //join
+        let i = num.join("-");
+        document.write(`using -: ${i}<br>`);
+        document.write(`using +: ${num.join("+")}<br>`)
+    </script>
+</body>
+</html>

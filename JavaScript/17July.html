@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>splice and slice methods:</h3>
+    <script>
+        //splice method
+        const nums  = [10,20,30,40,50,60,70,80,90];
+        //splice using for deletion
+        nums.splice(1,1);
+        document.write(`after deletion: ${nums}<br>`);
+        let i = nums.splice(3,2);
+        document.write(`i: ${i}<br>`);
+        document.write(`nums: ${nums}<br>`);
+        //splice using for updation
+        nums.splice(0,1,15);
+        document.write(`after updation: ${nums}<br>`);
+        nums.splice(1,2,20,25);
+        document.write(`after updation: ${nums}<br>`);
+        //splice using for insertion
+        nums.splice(0,0,10);
+        document.write(`after insertion: ${nums}<br>`);
+        nums.splice(4,0,30,35,40);
+        document.write(`after insertion: ${nums}<br>`);
+
+        //Slice method
+        const a = [11,22,33,44,55,66,77,88,99];
+        // let a1 = a.slice(0,5);
+        // let a2 = slice(5);
+        document.write(`${a.slice(0,4)}<br>`);
+        document.write(`${a.slice(5)}<br>`);
+        document.write(`${a.slice(-1)}<br>`);
+        document.write(`${a.slice(-2)}<br>`);
+
+        for(let i=0;i<=9;i++){
+            document.write(`${a.slice(-i)}<br>`);
+        }
+        for(let i=8;i>=0;i--){
+            document.write(`${a.slice(-i)}<br>`);
+        }
+        
+    </script>
+</body>
+</html>

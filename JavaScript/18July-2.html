@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>array destructuring</h3>
+	<script>
+	  const a=[10,20,30];
+	
+	  //let x=a[0], y=a[1], z=a[2];	OR
+	  let [x,y,z] = a;	//destructuring
+	  document.write(`x: ${x}<br> y: ${y}<br> z:	${z}<br>`);
+	  
+	  const str =['html','css','js','bs','ajax','jquery','angular','react','node'];
+	  
+	  let [i,j,k]=str ;	//destructuring
+  	  document.write(`str: ${str }<br>`);
+  	  document.write(`i: ${i}<br> j: ${j}<br> k: ${k}<br>`);
+
+	  let [p,,,,q]=str ;  //destructuring with skip
+  	  document.write(`p: ${p}<br> q: ${q}<br>`);
+	  
+	  let [e1,,e2,,...e]=str ;	//destructuring with skip & spread
+  	  document.write(`e1: ${e1}<br> e2:	${e2}<br> e: ${e}<br>`);
+	  
+	  let v1=100, v2=200;
+	  [v2,v1]=[v1,v2];	
+        //OR
+      //[v1,v2]=[v2,v1];
+	  
+	  document.write(`v1: ${v1}<br>`);
+	  document.write(`v2: ${v2}<br>`);	  
+	</script>
+</body>
+</html>
