@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Named Functions</h3>
+    <script>
+        //Defining Methods
+        function add(x,y) {
+            let res;
+            res = x + y;
+            return res;
+        }
+        function isPrime(n) {
+            let flag = true;
+            for(i=2;i<=i/2;i++){
+                if(n%i===0){
+                    flag = false;
+                    break;
+                }
+            }
+            // return flag;
+            return flag ? 'Prime number' : 'Not a Prime number'
+        }
+
+        //Calling functions
+        let a = add(10,20);
+        document.write(`Result: ${a} <br>`);
+        document.write(`Result: ${add(15,25)} <br>`);
+        document.write(`Result: ${isPrime(7)}`);
+
+    </script>
+</body>
+</html>

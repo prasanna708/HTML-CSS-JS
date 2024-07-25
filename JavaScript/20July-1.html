@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="20July-1.js"></script>
+</head>
+<body>
+    <h3>Arrow Functions</h3>
+    <script>
+        document.write(`${fun}<br>`);
+        fun();  //Calling
+        document.write(`<br>Sum: ${add(5,10)}<br>`);
+        document.write(`Product: ${product(5,10)}<br>`);
+        document.write(`Even or Odd: ${isEven(8)}<br>`);
+        document.write(`nth Sum: ${nthsum(4)}<br>`);
+    </script>
+
+    <h3>II/IE(Immediate Invoking/Executing) Functions</h3>
+    <script>
+        (function() {
+            document.write(`Calling From II Function.... <br>`);
+        }) ();
+
+        ( () => {
+            document.write(`Calling From II Arrow Function... <br>`);
+        }) ();
+    </script>
+</body>
+</html>

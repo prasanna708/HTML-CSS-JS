@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Expressional Functions</h3>
+    <script>
+        const add = function(x,y){
+            return x+y;
+        }
+        let a = add(10,20);
+        document.write(`Addition: ${a} <br>`);
+        document.write(`Addition: ${add(5,15)} <br>`)
+        const product = function(x,y){
+            return x*y;
+        }
+        document.write(`Product: ${product(12,5)} <br>`);
+        //Callback
+        const nums = [15,4,300,95,40];
+        nums.forEach(function(e) {
+            console.log('Call Back');
+            document.write(`${e} <br>`);
+        })
+        let sum = 0;
+        nums.forEach(function(e) {
+            sum = sum + e;
+        })
+        document.write(`Sum: ${sum} <br>`);
+        nums.sort(function(i,j){
+            console.log('sort');
+            return i-j;
+        })
+        document.write(`Sorted nums: ${nums} <br>`);
+    </script>
+
+    <button id="bt">Click Here</button>
+
+    <script>
+        bt.onclick = function() {
+            alert('Hello! Good Morning......');
+        } 
+    </script>
+</body>
+</html>
