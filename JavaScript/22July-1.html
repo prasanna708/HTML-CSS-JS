@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+         function Sample() {
+            document.write(`Sample Constructor Invoked.... <br>`);
+        }
+    </script>
+</head>
+<body>
+    <h3>Constructor Functions</h3>
+    <script>
+        //Sample();
+        //const ob = Sample();
+        // document.write(`${ob}<br>`);
+        const ob1 = new Sample();
+        document.write(`${ob1}<br>`);
+        new Sample();   //Anonymous object
+        document.write(`${new Sample()}<br>`);
+    </script>
+</body>
+</html>

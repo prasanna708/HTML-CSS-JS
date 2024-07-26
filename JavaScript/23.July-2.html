@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Functional Inheritence</h3>
+    <script>
+        //multi-level inheritence
+        document.write(`<h4>Multi-Level inheritance</h4>`);
+        function One(){
+            document.write(`First Constructor Invoked.....<br>`);
+        }
+        function Two(){
+            One.call();
+            document.write(`Second Constructor Invoked.....<br>`);
+        }
+        function Three(){
+            Two.call();
+            document.write(`Third Constructor Invoked.....<br>`);
+        }
+        const a = new One();
+        document.write(`<br>`);
+        const b = new Two();
+        document.write(`<br>`);
+        const c = new Three();
+        document.write(`<br>`);
+        document.write(`<h4>Hierarchical inheritance</h4>`);
+        //Hierarchical inheritance
+        function Ones(){
+            document.write(`First Constructor Invoked.....<br>`);
+        }
+        function Twos(){
+            Ones.call();
+            document.write(`Second Constructor Invoked.....<br>`);
+        }
+        function Threes(){
+            Ones.call();
+            document.write(`Third Constructor Invoked.....<br>`);
+        }
+        const d = new Ones();
+        document.write(`<br>`);
+        const e = new Twos();
+        document.write(`<br>`);
+        const f = new Threes();
+    </script>
+</body>
+</html>

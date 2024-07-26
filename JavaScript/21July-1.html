@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h3>OOPS in JS</h3>
     <script>
         const obj = {};
         document.write(`${obj} <br>`);
         const stud = {
-            id:101,
-            name:'John',
-            branch:'EEE',
-            year:2024
+            id: 101,
+            name: 'John',
+            branch: 'EEE',
+            year: 2024
         };
         document.write(`${stud} <br>`);
         document.write(`ID: ${stud.id} <br>`);
@@ -23,11 +25,96 @@
         document.write(`Year:${stud.year} <br>`);
 
         const img = {
-            src:'https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg',
-            width:200,
-            height:200,
-            alt:'image'
+            src: 'https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg',
+            width: 200,
+            height: 200,
+            alt: 'image'
         }
+
+        //object literals
+        const stud1 = {
+            name: "Alex",
+            rollno: 102,
+            marks: 520,
+            getResult: function () {
+                if (this.marks >= 500)
+                    return 'Pass';
+                else
+                    return 'Fail';
+            }
+        }
+        document.write(`<br>`);
+        document.write(`Name: ${stud1.name} <br>`);
+        document.write(`Roll No: ${stud1.rollno} <br>`);
+        document.write(`Marks: ${stud1.marks}<br>`);
+        document.write(`Result: ${stud1.getResult()}<br>`);
+        //nested objects
+        document.write(`<br>`);
+        const pd = {
+            name: "Smith",
+            id: 712,
+            job: "Manager",
+            address: {
+                area: "Ameerpet",
+                city: "Hyderabad",
+                pincode: 500001,
+            },
+            getAddress: function () {
+                return this.address.area + "," + this.address.city + "," + this.address.pincode;
+            }
+        }
+        document.write(`Area: ${pd.address.area} <br>`);
+        document.write(`City: ${pd.address.city}<br>`);
+        document.write(`Pincode: ${pd.address.pincode}<br>`);
+        document.write(`Address: ${pd.getAddress()}<br>`);
+
+        document.write(`<br>`);
+        //Array of objects
+        const imgs = [
+            { src: 'img1.jpg', width: 200, height: 300 },
+            { src: 'img2.jpg', width: 150, height: 200 },
+            { src: 'img3.jpg', width: 250, height: 250 },
+            { src: 'img4.jpg', width: 300, height: 150 },
+        ];
+        document.write(`${imgs}<br>`);
+        imgs.forEach((i) => {
+            document.write(`${i.src} &nbsp; ${i.width} &nbsp; ${i.height} <br>`);
+        });
+        document.write(`<br>`);
+
+        for (let i of imgs)
+            document.write(`${i.src} &nbsp; ${i.width} &nbsp; ${i.height} <br>`);
+
+        document.write(`<br>`);
+
+        document.write("<table border>");
+            document.write(`<tr>
+                                <th>Image</th> 
+                                <th>Width</th> 
+                                <th>Height</th> 
+                            </tr>`);
+            for (let i in imgs) {
+                document.write(`<tr>
+                                    <td>${imgs[i].src}</td>
+                                    <td>${imgs[i].width}</td>										
+                                    <td>${imgs[i].height}</td>
+                                </tr>`);
+            }
+        document.write("</table>");
+        
+        console.table(imgs);
+        document.write(`<br>`);
+        //printing keys and values
+        const obj1 = {a : 100, b : 200, c : 300, d : 400, e : 500};
+        document.write(`Keys: ${Object.keys(obj1)}<br>`);
+        document.write(`Values: ${Object.values(obj1)}<br><br>`);
+        const values = Object.values(obj1);
+		const keys = Object.keys(obj1);
+		const a = Object.entries(obj1);
+        document.write(`${values}<br>`);
+        document.write(`${keys}<br>`);
+        document.write(`${a}<br>`);
     </script>
 </body>
+
 </html>

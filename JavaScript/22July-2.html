@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="22July.js"></script>
+</head>
+<body>
+    <h3>Constructor Functions</h3>
+    <script>
+        // Calling Constructor without parameters
+        const b1 = new Book();
+        b1.getBook();
+        document.write(`b1: ${b1.getBook()}<br>`)
+        document.write(`${new Book().getBook()}<br>`);
+        const b2 = new Book();
+        document.write(`b2: ${b2.getBook()}<br>`);
+        //Calling Constructor with parameters
+        const b3 = new Books('JS','Eich',600,1997);
+        document.write(`b3: ${b3.getBooks()} <br>`);
+        const b4 = new Books('UI Designing');
+        document.write(`b4: ${b4.getBooks()} <br>`);
+    </script>
+</body>
+</html>

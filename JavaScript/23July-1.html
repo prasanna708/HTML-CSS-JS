@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Functional Inheritence</h3>
+    <script>
+        //Single Inheritence
+        function Parent() {
+            this.name = 'Allen';
+            this.job = 'Clerk';
+            this.sal = 20000;
+            this.getParentDetails = function() {
+                return 'Name: '+this.name + ',Job: ' + this.job + ',Salary: ' + this.sal;
+            }
+        }
+        function Child() {
+            Parent.call(this);      //inheriting Parent() constructor
+            this.pid = 101;
+            this.pname = 'Chocolate';
+            this.price = 50;
+            this.getChildDetails = function() {
+                return 'Product ID: '+this.pid + ',Product name: ' + this.pname + ',Price:' + this.price;
+            }
+        }
+
+        const p = new Parent();
+        document.write(`${p.getParentDetails()}<br>`);
+        const c = new Child();
+        document.write(`${c.getChildDetails()}<br>`);
+        document.write(`${c.name}<br>`);
+        document.write(`${new Child().getParentDetails()}<br>`);
+    </script>
+</body>
+</html>
