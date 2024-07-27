@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        document.write(`<h4><u>Inheritence:</u></h4>`);
+        function One(x)	//Parent C
+        {
+            this.x = x;
+            this.getX = () => this.x;
+        }
+        function Two(x, y)	//Child C
+        {
+            One.call(this, x);
+            this.y = y;
+            this.getY = () => this.y;
+            
+            this.add = () => this.x + this.y;
+            this.product = () => this.x * this.y;
+            this.div = () => this.x / this.y;
+            this.Sub = () => {
+                if (x > y)
+                    return this.x - this.y;
+                else
+                    return this.y - this.x;
+            }
+        }
+
+        const ob = new Two(10, 20);
+        document.write(`Sum: ${ob.add()}<br>`);
+        document.write(`Product: ${ob.product()}<br>`);
+        document.write(`Difference: ${ob.Sub()}<br>`);
+
+        const ob2 = new Two(15, 30);
+        document.write(`Sum: ${ob2.add()}<br>`);
+        document.write(`Product: ${ob2.product()}<br>`);
+
+        document.write(`<hr>`);
+
+        function Person(name,age,gender) {
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
+        }
+        function Employ(id=0,name='',age=0,gender='',job='',sal=0) {
+            Person.call(this,name,age,gender);
+            this.id = id;
+            this.job = job;
+            this.sal = sal;
+        }
+        let ob1 = new Employ(101,"Allen",40,"Male","Manager",20000);
+        document.write(`ID: ${ob1.id}<br>Name: ${ob1.name}<br>Age: ${ob1.age}<br>
+                        Gender: ${ob1.gender}<br>Job: ${ob1.job}<br>Salary: ${ob1.sal}<br>`);
+        document.write(`<hr>`);
+        let emp = new Employ(102,"Alex",25000);
+        document.write(`ID: ${emp.id}<br>Name: ${emp.name}<br>Age: ${emp.age}<br>
+                        Gender: ${emp.gender}<br>Job: ${emp.job}<br>Salary: ${emp.sal}<br>`);
+    </script>
+</body>
+
+</html>

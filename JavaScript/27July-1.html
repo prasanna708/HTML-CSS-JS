@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body align="center">
+    <h3>Dom Operations</h3>
+    <textarea id="tb" rows="10" cols="50"></textarea>
+    <hr>
+    <button id="b"><b>B</b></button>
+    <button id="ul"><u>U</u></button>
+    <button id="italic"><i>I</i></button>
+    <button id="strike"><s>S</s></button>
+    <input id="clr" type="color"/>
+    <button id="left">Left</button>
+    <button id="right">Right</button>
+    <button id="center">Center</button>
+    <script>
+        const ta = document.querySelector("#tb").style;
+        document.querySelector("#b").onclick = function() {
+            // if(ta.fontWeight === 'bold')
+            //     ta.fontWeight = 'normal';
+            // else
+            //     ta.fontWeight = 'bold';
+            ta.fontWeight = ta.fontWeight === 'bold' ? 'normal' : 'bold';
+        }
+        document.querySelector("#ul").onclick = function() {
+            ta.textDecoration = ta.textDecoration === 'underline' ? 'none' : 'underline'
+        }
+        document.querySelector("#italic").onclick = function() {
+            ta.fontStyle = ta.fontStyle === 'italic' ? 'normal' : 'italic'
+        }
+        document.querySelector("#strike").onclick = function() {
+            ta.textDecoration = ta.textDecoration === 'line-through' ? 'none' : 'line-through'
+        }
+        document.querySelector("#clr").onchange = () => ta.color = clr.value;
+        document.querySelector("#left").onclick = () => ta.textAlign = 'left';
+        document.querySelector("#right").onclick = () => ta.textAlign = 'right';
+        document.querySelector("#center").onclick = () => ta.textAlign = 'center';
+    </script>
+</body>
+</html>
