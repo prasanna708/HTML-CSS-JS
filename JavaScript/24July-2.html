@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>JavaScript Prototype</h3>
+    <script>
+        const stud = {name:'Allen'};
+        document.write(`${stud.name} <br>`);
+        stud.id = 101;
+        stud.course = 'JavaScript';
+        document.write(`ID: ${stud.id},Name: ${stud.name},Course: ${stud.course} <br>`);
+        const ob1 = {a:10};
+        Object.prototype.x = 100;
+        document.write(`ob1: ${ob1.x} <br>`);
+        document.write(`stud: ${stud.x} <br>`);
+        function add(x,y){
+            this.x = x;
+            this.y = y;
+            this.getSum = ()=> this.x + this.y;
+        }
+        const ob2 = new add(10,20);
+        document.write(`Sum: ${ob2.getSum()} <br>`);
+        add.prototype.z = 30;
+        add.prototype.Sum = function() {return this.x + this.y + this.z};
+        const ob3 = new add(10,20);
+        document.write(`Sum: ${ob3.Sum()} <br>`);
+    </script>
+</body>
+</html>

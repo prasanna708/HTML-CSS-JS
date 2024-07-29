@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Error handling in JS</h3>
+    <input type="text" id="first" placeholder="enter first number" />
+    <input type="text" id="second" placeholder="enter second number" />
+    <br>
+    <button onclick="Div()">Division</button>
+    <br>
+    <output id="op"></output>
+    <script>
+        function Div() {
+            let x, y, res;
+            try {
+                x = eval(first.value);
+                y = eval(second.value);
+                res = x / y;
+                op.value = `Result: ${res}`;
+            } catch (err) {
+                op.value = 'Please enter numbers only.....'
+                console.log(`${err.name} occured`);
+            }
+
+        }
+    </script>
+    <hr>
+    <script>
+        try {
+            let age = +prompt('Enter your age...')
+            if (age < 18)
+                throw 'Not allowed to participate in voting...';
+            if (isNaN(age))
+                throw 'Age must be in numbers only...';
+            document.write('welcome to voting.<br>');
+            documnt.write('Please continue voting process..!');
+        } catch (error) {
+            document.write(error);
+        }
+    </script>
+
+</body>
+
+</html>
