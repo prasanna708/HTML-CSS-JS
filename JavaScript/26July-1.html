@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Working on DOM</h3>
+    <img src="../HTML/images/Strawhat.jpg" width="300px" height="300px"/>
+    <img src="../HTML/images/CC.jpg" width="300px" height="300px"/>
+    <hr>
+    <script>
+        document.write(`${document.title}<br>`);
+        document.title = 'DOM STRUCTURE';
+        document.write(`${document.URL}<br>`);
+        // window.location.href = 'http://www.google.com';
+        const b = document.body;
+        document.write(`${b}<br>`);
+        const h = document.head;
+        document.write(`${h}<br>`);
+        const f = document.forms;
+        document.write(`${f}<br>`);
+        const i = document.images;
+        document.write(`${i}<br>`);
+        const hl = document.links;
+        document.write(`${hl}<br>`);
+    </script>
+    <hr><hr>
+    <!-- Document Methods -->
+    <h3 id="h">Document Methods</h3>
+    <input type="radio" name="color"> <label>Red</label>
+    <input type="radio" name="color"> <label>Blue</label>
+    <input type="radio" name="color"> <label>Green</label> 
+    <hr>
+    <script>
+        const h1 = document.getElementById("h");
+        document.write(`${h1}<br>`);
+        const clr = document.getElementsByName("color");
+        document.write(`${clr}<br>`);
+        const l = document.getElementsByTagName("label");
+        document.write(`${l}<br>`);
+    </script>
+    <hr><hr>
+    <!-- Document properties -->
+    <h3>Document properties</h3>
+    <h4 id="i1">HTML</h4>
+    <p class="c1">CSS</p>
+    <div class="c1">JavaScript</div>
+    <span class="c1">BootStrap</span>
+    <hr>
+    <script>
+        const ob1 = document.querySelector("#i1");
+        document.write(`${ob1}<br>`);
+        const ob2 = document.querySelectorAll(".c1");
+        document.write(`${ob2}<br>`);
+    </script>
+</body>
+</html>

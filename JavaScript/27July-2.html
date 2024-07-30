@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="i1" style="color: blue; background: beige;">DOM STYLES</h1>
+    <script>
+        const h1 = document.querySelector("#i1").style;
+        h1.color = 'red';
+        h1.background = 'black';
+        h1.borderRadius = '15px';
+        h1.width = '50%';
+    </script>
+    <hr><hr>
+    <!-- Dynamic Event Handling -->
+     <h3>DOM Events</h3>
+     <button id="bt1">Push here</button>
+     <button id="bt2">Pull here</button>
+     <script>
+        const bt1 = document.querySelector("#bt1");
+        bt1.addEventListener('click', () => alert('Button pushed.....'));
+        const bt2 = document.querySelector("#bt2");
+        bt2.onclick = () => alert('Button pulled.....');
+     </script>
+</body>
+</html>

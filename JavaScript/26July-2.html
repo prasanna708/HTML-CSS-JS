@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Data Manipulation using DOM</h3>
+    <h4 id="head">Hello</h4>
+    <input type="text" id="tb" value="+91"/>
+    <hr>
+    <script>
+        const h = document.getElementById("head");
+        document.write(`${h.innerText}<br>`);
+        h.innerText = `Good`;
+        h.innerText += 'Morning';
+        // h.innerText = '';    used for deleting element
+        const tb1 = document.getElementById("tb");
+        document.write(`${tb1.value}<br>`);
+        tb1.value = 'Hi';
+        tb1.value += 'Welcome';
+        // tb1.value = '';
+    </script>
+    <hr><hr>
+    <img src="../HTML/images/House.jpg" width="300px" height="300px" border = "3">
+    <hr>
+    <script>
+        const i = document.querySelector("img");
+        // document.write(`${i.getAttribute("src")}`);
+        document.write(`src:${i.src}<br>width:${i.width}<br>height:${i.height}<br>border:${i.border}<br>`);
+        i.src = 'D:/HTML-CSS-JS/HTML/images/CC.jpg';
+        // i.setAttribute('src','D:/HTML-CSS-JS/HTML/images/CC.jpg');
+        i.border = 0;
+        i.title = 'Capsule Corps';
+    </script>
+</body>
+</html>
