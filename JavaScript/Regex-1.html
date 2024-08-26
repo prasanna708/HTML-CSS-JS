@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="td" />
+    <br/>
+    <button onclick="check()">Check</button>
+    <script>
+        function check() {
+            let x = td.value;
+            const exp = new RegExp(/siva/i);
+            if (exp.test(x) == true)
+                alert("Matching with regex pattern...");
+            else
+                alert("Not matching to regex pattern...")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Adding a Product to Cart
+        function addProductToCart() {
+            const addProductToCartPromise = new Promise(function(resolve,reject) {
+                let isProductAdded = true;
+                setTimeout (function() {
+                    if (isProductAdded)
+                        resolve("Product added to Cart successfully...");
+                    else
+                        reject("No product is added to cart...");
+                },1000)                     
+            });
+            return addProductToCartPromise;
+        }
+        //Payment Process
+        function processPayment() {
+            const processPaymentPromise = new Promise(function(resolve,reject) {
+                let isPaymentDone = true;
+                setTimeout (function() {
+                    if (isPaymentDone)
+                        resolve("Payment successful....");
+                    else
+                        reject("Payment not done...");
+                },1000);    
+            });
+            return processPaymentPromise;
+        }
+        //order placing
+        function placingOrder() {
+            const placingOrderPromise = new Promise ( function (resolve,reject) {
+                let isOrderPlaced = true;
+                setTimeout( function() {
+                    if (isOrderPlaced)
+                        resolve("Order Placed Successfully....");
+                    else
+                        reject("Order is not placed....");
+                },1000);
+            } );
+            return placingOrderPromise;
+        }
+
+        async function PostOrderValidation() {
+            try {
+                let successMessage = await addProductToCart();
+                console.log(successMessage);
+                
+                successMessage = await processPayment();
+                console.log(successMessage);
+
+                successMessage = await placingOrder();
+                console.log(successMessage);
+            } catch (failureMessage) {
+                console.log(failureMessage);
+            }
+        }
+
+        PostOrderValidation();
+    </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // const userValidationPromise = new Promise(function (resolve, reject) {
+        //     let isUserCredentials = true;
+        //     if (isUserCredentials)
+        //         resolve('Your Credentials are matching with our records...');
+        //     else
+        //         reject('Your Credentials did not match with our records...');
+        // });
+
+        //Authentication
+        function userValidation() {
+            const userValidationPromise = new Promise(function (resolve, reject) {
+                let isUserCredentials = true;
+                setTimeout(function() {
+                    if (isUserCredentials)
+                    resolve('Your Credentials are matching with our records...');
+                else
+                    reject('Your Credentials did not match with our records...');
+                },1000);
+            });
+            return userValidationPromise;
+        }
+
+        //Authorisation
+        function accessValidation() {
+            const accessValidationPromise = new Promise(function(resolve,reject) {
+                let isAccessAvailable = true;
+                setTimeout(function() {
+                    if (isAccessAvailable)
+                    resolve("Welcome, You can access the records...");
+                else
+                    reject("Sorry! you don't have access to records...");
+                },500);
+            });
+            return accessValidationPromise;
+        }
+
+        // //ES6 syntax
+        // userValidation().then(function (successMessage) {
+        //     console.log("Statement from then block: " + successMessage);
+        //     accessValidation().then(function (successMessage) {
+        //         console.log("Statement from then block: " + successMessage);
+        //     }).catch(function(failureMessage) {
+        //         console.log("Statement from catch block: " + failureMessage);
+        //     });
+        // }).catch(function (failureMessage) {
+        //     console.log("Statement from catch block: " + failureMessage);
+        // });
+
+        // ES7 syntax
+        async function postUserValidation() {
+            try {
+                let successMessage = await userValidation();
+                console.log("Statement from then block: " + successMessage);
+                successMessage = await accessValidation();
+                console.log("Statement from then block: " + successMessage);
+            } catch (failureMessage) {
+                console.log("Statement from catch block: " + failureMessage);
+            }
+        }
+        postUserValidation();
+
+        // Promise.all([userValidation(),accessValidation()]).then(function(message) {
+        //     console.log(message);
+        // }).catch(function(error) {
+        //     console.log(error);
+        // });
+        
+    </script>
+</body>
+
+</html>

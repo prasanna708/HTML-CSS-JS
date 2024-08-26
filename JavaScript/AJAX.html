@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Name: <span id="name"></span></p>
+    
+    <p>Email: <span id="email"></span></p>
+
+    <p>Street: <span id="street"></span></p>
+
+    <p>City: <span id="City"></span></p>
+
+    <p>Date of Birth: <span id="DOB"></span></p>
+
+    <script>
+        const name = document.getElementById("name");
+        const email = document.getElementById("email");
+        const street = document.getElementById("street");
+        const city = document.getElementById("City");
+        const dob = document.getElementById("DOB");
+
+        const httpRequest = new XMLHttpRequest();
+        
+        httpRequest.onreadystatechange = function() {
+            if (httpRequest.readyState === 4) {
+                console.log(httpRequest.responseText);
+                
+                const userInfo = JSON.parse(httpRequest.responseText);
+                
+                name.innerHTML = userInfo.results[0].name.title + '. ' + userInfo.results[0].name.first + ' ' + userInfo.results[0].name.last;
+                email.innerHTML = userInfo.results[0].email;
+                street.innerHTML = userInfo.results[0].location.street.number + ', ' + userInfo.results[0].location.street.name;
+                city.innerHTML = userInfo.results[0].location.city;
+                
+                const dobdate = new Date(userInfo.results[0].dob.date);
+                const month = (dobdate.getMonth() + 1).toString().length === 1 ? '0' + (dobdate.getMonth() + 1) : dobdate.getMonth() + 1;
+                dob.innerHTML = dobdate.getDate() + '/' + month + '/' + dobdate.getFullYear();
+            }
+        }
+
+        httpRequest.open('GET','https://randomuser.me/api/?gender=female');
+        
+        httpRequest.send();
+    </script>
+</body>
+</html>
